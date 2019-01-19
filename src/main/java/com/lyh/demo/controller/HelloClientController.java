@@ -1,16 +1,20 @@
-package com.lyh.demo;
+package com.lyh.demo.controller;
 
+import com.lyh.demo.api.HelloApi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 客户端测试
+ */
 @RestController()
-public class TestFeignController{
+public class HelloClientController {
   @Autowired
-  OpenApi openApi;
+  HelloApi helloApi;
+
   @RequestMapping(value="/test/feign")
   public Object test(){
-    return openApi.getUniqueId("zhangsan");
+    return helloApi.getUniqueId("zhangsan");
   }
 }
