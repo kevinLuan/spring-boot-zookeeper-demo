@@ -5,6 +5,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+/**
+ * 基于REST风格定义的feign api
+ */
 @FeignClient(value = "spring-boot-zookeeper-demo", path = "api/hello")
 public interface HelloApi {
 

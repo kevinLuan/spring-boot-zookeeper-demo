@@ -1,6 +1,8 @@
 package com.lyh.demo.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
@@ -9,14 +11,15 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 @Configuration
-public class AppConfig {
+public class AppConfiguration {
   @Bean
-  JedisConnectionFactory jedisConnectionFactory() {
+  @Autowired
+  JedisConnectionFactory jedisConnectionFactory(RedisConfiguration conf) {
     JedisConnectionFactory connectionFactory = new JedisConnectionFactory();
-    connectionFactory.setHostName("127.0.0.1");
-    connectionFactory.setPort(6379);
-    connectionFactory.setPassword("123456");
-    connectionFactory.setTimeout(1000);
+    connectionFactory.setHostName(conf.getHost());
+    connectionFactory.setPort(conf.getPort());
+    connectionFactory.setPassword(conf.getPassword());
+    connectionFactory.setTimeout(conf.getTimeout());
     return connectionFactory;
   }
   @Bean
