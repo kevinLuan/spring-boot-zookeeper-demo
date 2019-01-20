@@ -36,6 +36,64 @@
       /services/spring-boot-zookeeper-demo/0384a048-bb1a-4b48-8819-2ceb7007b247
       
 
+###### 注册实例信息
+  ```json
+  [
+      {
+          "serviceId":"spring-boot-zookeeper-demo",
+          "host":"192.168.1.101",
+          "port":8081,
+          "secure":false,
+          "uri":"http://192.168.1.101:8081",
+          "metadata":{
+  
+          },
+          "serviceInstance":{
+              "name":"spring-boot-zookeeper-demo",
+              "id":"36669ee4-9c17-4f99-9ef3-b7dfe6eca59d",
+              "address":"192.168.1.101",
+              "port":8081,
+              "sslPort":null,
+              "payload":{
+                  "id":"application-1",
+                  "name":"spring-boot-zookeeper-demo",
+                  "metadata":{
+  
+                  }
+              },
+              "registrationTimeUTC":1547972060511,
+              "serviceType":"DYNAMIC",
+              "uriSpec":{
+                  "parts":[
+                      {
+                          "value":"scheme",
+                          "variable":true
+                      },
+                      {
+                          "value":"://",
+                          "variable":false
+                      },
+                      {
+                          "value":"address",
+                          "variable":true
+                      },
+                      {
+                          "value":":",
+                          "variable":false
+                      },
+                      {
+                          "value":"port",
+                          "variable":true
+                      }
+                  ]
+              },
+              "enabled":true
+          },
+          "scheme":null
+      }
+  ]
+  
+  ```
 
 ###### 开源项目源码 
     https://github.com/spring-cloud/spring-cloud-zookeeper
