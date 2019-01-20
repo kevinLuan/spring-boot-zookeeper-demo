@@ -97,6 +97,7 @@
 
 ###### 开源项目源码 
     https://github.com/spring-cloud/spring-cloud-zookeeper
-
+    #官方配置手册
+    http://shardingsphere.io/document/current/cn/manual/sharding-jdbc/configuration/config-spring-boot/
 ##### 问题反馈
     mailto: 136713318@qq.com
